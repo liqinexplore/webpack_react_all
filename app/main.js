@@ -11,54 +11,9 @@
 import React from 'react';
 import { render } from 'react-dom'
 import { Router, Route, hashHistory, IndexRoute,Link } from 'react-router';
-
-const App = React.createClass({
-    render() {
-        return (
-            <div>
-                <h1>App</h1>
-                <ul>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/inbox">Inbox</Link></li>
-                </ul>
-                {this.props.children}
-            </div>
-        )
-    }
-});
-
-const Inbox = React.createClass({
-    render() {
-        return (
-            <div>
-                Inbox
-            </div>
-        )
-    }
-});
-
-const About = React.createClass({
-    render() {
-        return (
-            <div>
-                About
-            </div>
-        )
-    }
-});
-// 添加组件 Index
-const Index = React.createClass({
-    render() {
-        return (
-            <div>
-                Index
-                Index
-                Index
-            </div>
-        )
-    }
-});
-
+import Home from './route_demo/firstRoute/Home';
+import Dashboard from './route_demo/firstRoute/dashboard';
+import NotFound from './route_demo/firstRoute/notfound'
 //render((
 //    <Router>
 //        <Route path="/" component={App}>
@@ -68,30 +23,21 @@ const Index = React.createClass({
 //    </Router>
 //), document.getElementById('app'));
 // 添加 404 组件
-const NotFound = React.createClass({
-    render() {
-        return (
-            <div>
-                404
-                NotFound
-            </div>
-        )
-    }
-});
+
 // 修改配置
 const routerConfig = [
     {
         path: '/',
-        component: App,
-        indexRoute: { component: Index },
-        childrenRoutes: [
-            { path: 'about', component: About },
-            { path: 'inbox', component: Inbox },
+        component: Dashboard,
+        indexRoute: { component: Home },
+        childRoutes: [
+           require('./route_demo/firstRoute')
         ]
     },
     {
         path: '*',
-        component: NotFound,
+        component: Dashboard,
+       indexRoute:{component:NotFound}
     }
 ];
 render((
