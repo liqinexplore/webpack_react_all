@@ -5,6 +5,12 @@ var path=require('path');
 var webpack =require('webpack');
 
 module.exports={
+    resolve:{
+        root:[
+            path.resolve('./app/_global/components')
+        ],
+        extensions:['','.js','.jsx']
+    },
     entry:['webpack/hot/dev-server',
         'webpack-dev-server/client?http://localhost:8090',
         path.resolve(__dirname, './app/main.js')],
