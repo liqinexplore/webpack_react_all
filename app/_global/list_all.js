@@ -5,7 +5,7 @@ module.exports={
         type: "level",
         icon: "share-alt",
         keyID:"1",
-        router: "/circle",
+        router: "/firstRoute",
         child: [{
             name: "内容管理",
             type: "group",
@@ -16,7 +16,7 @@ module.exports={
                 name: "圈子",
                 icon: "appstore-o",
                 keyID:"3",
-                router: "/circle/items"
+                router: "/firstRoute/twoRoute/route1.jsx"
             }, {
                 name: "圈帖",
                 icon: "book",

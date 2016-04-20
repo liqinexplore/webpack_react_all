@@ -82,4 +82,8 @@ const Sider = React.createClass({
         );
     }
 });
-ReactDOM.render(<Sider ShowDatas={list_all} />, document.getElementById('listall'));
+Sider.defaultProps={
+  ShowDatas:list_all
+}
+//ReactDOM.render(<Sider ShowDatas={list_all} />, document.getElementById('listall'));
+export default Sider;

@@ -11,9 +11,9 @@
 import React from 'react';
 import { render } from 'react-dom'
 import { Router, Route, hashHistory, IndexRoute,Link } from 'react-router';
-import Home from './route_demo/firstRoute/Home';
-import Dashboard from './route_demo/firstRoute/dashboard';
-import NotFound from './route_demo/firstRoute/notfound'
+import Home from './route_demo/public/Home';
+import Dashboard from './route_demo/public/dashboard';
+import NotFound from './route_demo/public/notfound'
 //render((
 //    <Router>
 //        <Route path="/" component={App}>
