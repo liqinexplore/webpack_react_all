@@ -6,17 +6,8 @@
     /*url('./../iconfont/iconfont.ttf?t=1458285388') format('truetype'), /!* chrome, firefox, opera, Safari, Android, iOS 4.2+*!/*/
     /*url('./../iconfont/iconfont.svg?t=1458285388#iconfont') format('svg'); /!* iOS 4.1- *!/*/
 /*}*/
-.miantop{
-    width: 100%;
-   
-}
+.system_top { width: 100%; height: 100px; padding: 10px; color: #F66; font-size: 20px; border-bottom: 1px solid #E9E9E9; }
 
-.mianleft{
-    width: 20%;
-  display: inline-block;
-}
-.mianright{
-    width: 80%;
-    display: inline-block;
-}
+.system_menu { display: inline-block; width: 20%; }
 
+.system_content { display: inline-block; width: 80%; position: absolute; }

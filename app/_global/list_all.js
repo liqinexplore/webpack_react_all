@@ -11,12 +11,12 @@ module.exports={
             type: "group",
             icon: "save",
             keyID:"2",
-            router: "",
+            router: "/route_dome",
             child: [{
                 name: "圈子",
                 icon: "appstore-o",
                 keyID:"3",
-                router: "/firstRoute/twoRoute/route1.jsx"
+                router: "/firstRoute/twoRoute"
             }, {
                 name: "圈帖",
                 icon: "book",

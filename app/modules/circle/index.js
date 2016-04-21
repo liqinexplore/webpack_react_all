@@ -1,0 +1,19 @@
+/**
+ * Created by Administrator on 2016/4/21.
+ */
+module.exports={
+    path:'circle',
+    breadcrumbName:"ШІзг",
+    getChildRoutes(location,callback){
+        require.ensure([],(require)=>{
+           callback(null,[
+               require('./routes/items')
+           ])
+        });
+    },
+    getComponent(nextState,callback){
+        require._ensure([],(require)=>{
+            callback(null,require('./components/circle.jsx'))
+        })
+    }
+};

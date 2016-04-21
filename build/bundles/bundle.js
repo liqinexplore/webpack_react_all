@@ -74,7 +74,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "366c7ee5a404bc0d0620"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a01d3f87d17ccbe06fdb"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -8044,27 +8044,6 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	//render((
-	//    <Router>
-	//        <Route path="/" component={App}>
-	//            <Route path="about" component={About} />
-	//            <Route path="inbox" component={Inbox} />
-	//        </Route>
-	//    </Router>
-	//), document.getElementById('app'));
-	// 添加 404 组件
-
-	// 修改配置
-	/**
-	 * Created by Administrator on 2016/4/6.
-	 */
-	//import Hello from './index/Hello.jsx';
-	//import World from './index/World.jsx';
-	//import antd from './index/antd.jsx';
-	//import list from  './index/list.jsx';
-	//import list_all from './index/list_all.jsx';
-	//import index from './icon/index.jsx';
-	//import inputdemo from './qlwb_demo/inputdemo.jsx';
 	var routerConfig = [{
 	    path: '/',
 	    component: _dashboard2.default,
@@ -32930,6 +32909,8 @@
 
 	var _list_all2 = _interopRequireDefault(_list_all);
 
+	var _reactRouter = __webpack_require__(233);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var SubMenu = _antd.Menu.SubMenu;
@@ -32976,7 +32957,12 @@
 	                            test = _react2.default.createElement(
 	                                _antd.Menu.Item,
 	                                { key: childs.keyID },
-	                                childs.name
+	                                _react2.default.createElement(
+	                                    _reactRouter.Link,
+	                                    { to: childs.router },
+	                                    ' ',
+	                                    childs.name
+	                                )
 	                            );
 	                            return test;
 	                        });
@@ -32985,13 +32971,17 @@
 	                    drapdown = _react2.default.createElement(
 	                        MenuItemGroup,
 	                        { key: child.keyID, title: _react2.default.createElement(
-	                                'span',
-	                                null,
-	                                _react2.default.createElement(_antd.Icon, { type: child.icon }),
+	                                _reactRouter.Link,
+	                                { to: child.router },
 	                                _react2.default.createElement(
 	                                    'span',
 	                                    null,
-	                                    child.name
+	                                    _react2.default.createElement(_antd.Icon, { type: child.icon }),
+	                                    _react2.default.createElement(
+	                                        'span',
+	                                        null,
+	                                        child.name
+	                                    )
 	                                )
 	                            ) },
 	                        child2
@@ -33004,13 +32994,17 @@
 	            return _react2.default.createElement(
 	                SubMenu,
 	                { key: item.keyID, title: _react2.default.createElement(
-	                        'span',
-	                        null,
-	                        _react2.default.createElement(_antd.Icon, { type: item.icon }),
+	                        _reactRouter.Link,
+	                        { to: item.router },
 	                        _react2.default.createElement(
 	                            'span',
 	                            null,
-	                            item.name
+	                            _react2.default.createElement(_antd.Icon, { type: item.icon }),
+	                            _react2.default.createElement(
+	                                'span',
+	                                null,
+	                                item.name
+	                            )
 	                        )
 	                    ) },
 	                children
@@ -33024,7 +33018,7 @@
 	            _react2.default.createElement(
 	                _antd.Menu,
 	                { onClick: this.handleClick,
-	                    style: { width: 240 },
+	                    style: { width: '100%' },
 	                    defaultOpenKeys: ['1'],
 	                    selectedKeys: [this.state.current],
 	                    mode: 'inline' },
@@ -82434,7 +82428,7 @@
 	            type: "group",
 	            icon: "save",
 	            keyID: "2",
-	            router: "",
+	            router: "/route_dome",
 	            child: [{
 	                name: "圈子",
 	                icon: "appstore-o",
@@ -82613,8 +82607,16 @@
 	 */
 
 	module.exports = {
-	    path: '/firstroute',
-	    getChildRoutes: function getChildRoutes(location, callback) {
+	    path: 'firstRoute',
+	    //getChildRoutes(location,callback){
+	    //    alert("���ĵط�33333");
+	    //    require.ensure([],(require)=>{
+	    //        callback(null,[
+	    //            require('./twoRoute')
+	    //        ])
+	    //    });
+	    //},
+	    getComponent: function getComponent(nextState, callback) {
 	        __webpack_require__.e/* nsure */(1, function (require) {
 	            callback(null, [__webpack_require__(658)]);
 	        });

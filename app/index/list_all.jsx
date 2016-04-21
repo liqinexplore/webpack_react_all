@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import '../../node_modules/antd/lib/index.css';
 import { Menu, Icon } from 'antd';
 import list_all from './../_global/list_all.js';
+import { Link } from 'react-router'
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
@@ -44,7 +45,7 @@ const Sider = React.createClass({
                            console.log(test);
                             test=(
                                 <Menu.Item   key={childs.keyID}  >
-                                    {childs.name}
+                                   <Link to={childs.router}> {childs.name}</Link>
                                 </Menu.Item>
                             );
                             return test;
@@ -52,8 +53,8 @@ const Sider = React.createClass({
                     }
                     //判断是否有下一层中的child，如果没有执行drapdown，然后再去调用child2
                     drapdown=(
-                        <MenuItemGroup  key={child.keyID} title={<span><Icon type={child.icon} /><span>{child.name}</span></span>}>
-                            {child2}
+                        <MenuItemGroup  key={child.keyID} title={ <Link to={child.router}><span><Icon type={child.icon} /><span>{child.name}</span></span></Link>}>
+                           {child2}
                         </MenuItemGroup>
                     );
 
@@ -62,8 +63,8 @@ const Sider = React.createClass({
             }
             //遍历这一层的数据，并调用下一层数据children，其中这一层的参数是item
             return (
-                <SubMenu key={item.keyID} title={<span><Icon type={item.icon} /><span>{item.name}</span></span>}>
-                    {children}
+                <SubMenu key={item.keyID} title={ <Link to={item.router}><span><Icon type={item.icon} /><span>{item.name}</span></span></Link>}>
+                   {children}
                 </SubMenu>
             );
         });
@@ -73,17 +74,17 @@ const Sider = React.createClass({
         return (
             //第一层外边框 调用第一层中的循环items
             <Menu onClick={this.handleClick}
-                         style={{ width: 240 }}
+                         style={{ width: '100%'}}
                          defaultOpenKeys={['1']}
                          selectedKeys={[this.state.current]}
                          mode="inline">
-                        {items}
+                      {items}
             </Menu>
         );
     }
 });
 Sider.defaultProps={
   ShowDatas:list_all
-}
+};
 //ReactDOM.render(<Sider ShowDatas={list_all} />, document.getElementById('listall'));
 export default Sider;

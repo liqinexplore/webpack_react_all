@@ -1,6 +1,6 @@
-webpackJsonp([1],{
+webpackJsonp([3],{
 
-/***/ 658:
+/***/ 660:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23,31 +23,31 @@ webpackJsonp([1],{
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Route1 = function (_React$Component) {
-	    _inherits(Route1, _React$Component);
+	var One = function (_Component) {
+	    _inherits(One, _Component);
 
-	    function Route1() {
-	        _classCallCheck(this, Route1);
+	    function One() {
+	        _classCallCheck(this, One);
 
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Route1).apply(this, arguments));
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(One).apply(this, arguments));
 	    }
 
-	    _createClass(Route1, [{
+	    _createClass(One, [{
 	        key: 'render',
 	        value: function render() {
-	            alert("dsds");
+	            alert("ddssdsd");
 	            return _react2.default.createElement(
 	                'h1',
 	                null,
-	                '����ǿ����React������1111'
+	                '�����������˵��ľ����ײ˵�'
 	            );
 	        }
 	    }]);
 
-	    return Route1;
-	}(_react2.default.Component);
+	    return One;
+	}(_react.Component);
 
-	module.exports = Route1;
+	module.exports = One;
 
 /***/ }
 

@@ -1,6 +1,6 @@
-webpackJsonp([1],{
+webpackJsonp([2],{
 
-/***/ 658:
+/***/ 659:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35,11 +35,10 @@ webpackJsonp([1],{
 	    _createClass(Route1, [{
 	        key: 'render',
 	        value: function render() {
-	            alert("dsds");
 	            return _react2.default.createElement(
 	                'h1',
 	                null,
-	                '����ǿ����React������1111'
+	                '����ǿ����React������'
 	            );
 	        }
 	    }]);
