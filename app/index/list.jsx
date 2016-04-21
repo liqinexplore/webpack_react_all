@@ -56,10 +56,10 @@ var Navigation =React.createClass({
 //    },
 //    render: function () {
 //        var config = this.props.config;
-//        var items = config.map(function (item) {
+//        var items = config.map(function (items) {
 //            var children, dropdown;
-//            if (item.children) {
-//                children = item.children.map(function (child) {
+//            if (items.children) {
+//                children = items.children.map(function (child) {
 //                    return (
 //                        <li className="navigation__dropdown__item">
 //                            <a className="navigation__dropdown__link" href={ child.href }>
@@ -76,8 +76,8 @@ var Navigation =React.createClass({
 //            }
 //            return (
 //                <li className="navigation__item">
-//                    <a className="navigation__link" href={ item.href }>
-//                        { item.text }
+//                    <a className="navigation__link" href={ items.href }>
+//                        { items.text }
 //                    </a>
 //                    { dropdown }
 //                </li>

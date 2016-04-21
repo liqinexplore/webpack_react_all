@@ -1,52 +1,22 @@
 webpackJsonp([2],{
 
-/***/ 659:
+/***/ 663:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	/**
+	 * Created by LQ on 2016/4/21.
+	 */
+	module.exports = {
+	    path: 'id/:circleID',
 
-	var _react = __webpack_require__(76);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(232);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Route1 = function (_React$Component) {
-	    _inherits(Route1, _React$Component);
-
-	    function Route1() {
-	        _classCallCheck(this, Route1);
-
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Route1).apply(this, arguments));
+	    getComponent: function getComponent(nextState, callback) {
+	        __webpack_require__.e/* nsure */(3, function (require) {
+	            callback(null, __webpack_require__(664));
+	        });
 	    }
-
-	    _createClass(Route1, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'h1',
-	                null,
-	                '����ǿ����React������'
-	            );
-	        }
-	    }]);
-
-	    return Route1;
-	}(_react2.default.Component);
-
-	module.exports = Route1;
+	};
 
 /***/ }
 

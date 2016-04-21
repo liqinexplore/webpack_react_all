@@ -3,8 +3,8 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TopBar from 'page_top.js'
-import Sider from './../../index/list_all.jsx';
+import TopBar from './page_top.js'
+import Sider from '../../index/list_all.jsx';
 import {hashHistory} from 'react-router';
 import { Breadcrumb } from 'antd';
 require('../../_global/custom.css');

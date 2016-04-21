@@ -1,26 +1,26 @@
 /**
  * Created by Administrator on 2016/4/21.
  */
-import React,{Componet} from 'react';
+import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
 import {NavBox} from 'customComponents'
 
-class Home extends Componet{
+class Home extends Component{
     render(){
         const thisData = [
-            {id: 1, title: 'ĞÂÎÅ', route: "news",description:"ËùÓĞÓĞ¹ØĞÂÎÅµÄ²Ù×÷"},
-            {id: 2, title: 'Çé±¨Õ¾', route: "news",description:"ËùÓĞÓĞ¹ØÇé±¨Õ¾µÄ²Ù×÷"},
-            {id: 3, title: 'È¦×Ó', route: "circle",description:"ËùÓĞÓĞ¹ØÈ¦×ÓµÄ²Ù×÷£¨È¦×Ó¡¢È¦Ìû¡¢È¦ÆÀ£©"},
-            {id: 4, title: 'ÏßÏÂ', route: "underline",description:"ËùÓĞÓĞ¹ØÏßÏÂµÄ²Ù×÷£¨ÉÌÆ·¡¢»î¶¯¡¢ÉÌ¼Ò¡¢Æ·ÅÆ¡¢ÆÀ¼Û£©"},
-            {id: 5, title: 'ĞòÁĞ¹ÜÀí', route: "serial"},
-            {id: 6, title: '¸öÈËÖĞĞÄ', route: "user"},
-            {id: 7, title: 'ÆäËû', route: ""}
+            {id: 1, title: 'æ–°é—»', route: "news",description:"æ‰€æœ‰æœ‰å…³æ–°é—»çš„æ“ä½œ"},
+            {id: 2, title: 'æƒ…æŠ¥ç«™', route: "news",description:"æ‰€æœ‰æœ‰å…³æƒ…æŠ¥ç«™çš„æ“ä½œ"},
+            {id: 3, title: 'åœˆå­', route: "circle",description:"æ‰€æœ‰æœ‰å…³åœˆå­çš„æ“ä½œï¼ˆåœˆå­ã€åœˆå¸–ã€åœˆè¯„ï¼‰"},
+            {id: 4, title: 'çº¿ä¸‹', route: "underline",description:"æ‰€æœ‰æœ‰å…³çº¿ä¸‹çš„æ“ä½œï¼ˆå•†å“ã€æ´»åŠ¨ã€å•†å®¶ã€å“ç‰Œã€è¯„ä»·ï¼‰"},
+            {id: 5, title: 'åºåˆ—ç®¡ç†', route: "serial"},
+            {id: 6, title: 'ä¸ªäººä¸­å¿ƒ', route: "user"},
+            {id: 7, title: 'å…¶ä»–', route: ""}
         ]
         return(
             <div>
-            <ul>
-                <NavBox data={thisData}/>
-            </ul>
+                <ul>
+                    <NavBox data={thisData}/>
+                </ul>
             </div>
         )
     }

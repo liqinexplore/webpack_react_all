@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/_global/components/customComponents/NavBox.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/_global/list_all.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/index/Hello.jsx" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/index/World.jsx" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/index/antd.jsx" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/index/list_all.jsx" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/main.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/route_demo/index.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/route_demo/public/Home.jsx" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/route_demo/public/notfound.jsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/_public/Dashboard.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/_public/Home.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/_public/NotFound.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/_public/page_top.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/circle/components/circle.jsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/circle/components/dashboard.jsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/circle/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/circle/routes/items/components/footer.jsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/circle/routes/items/components/header.jsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/circle/routes/items/components/items.jsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/circle/routes/items/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/circle/routes/items/routes/item/components/item.jsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/circle/routes/items/routes/item/index.js" charset="UTF-8" />
   </component>
 </project>

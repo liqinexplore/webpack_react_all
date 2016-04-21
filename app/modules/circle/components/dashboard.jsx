@@ -1,4 +1,6 @@
-
+/**
+ * Created by lizhen on 4/12/2016.
+ */
 //https://cnodejs.org/topic/5231a630101e574521e45ef8
 import React, { Component } from 'react'
 import {NavBox }from  'customComponents'
@@ -7,16 +9,17 @@ class Dashboard extends Component {
     render() {
 
         const thisData = [
-            {id: 1, title: 'ÁĞ±í', route: "circle/items", description: "ËùÓĞÓĞ¹ØÈ¦×ÓµÄ²Ù×÷£¨ĞÂ½¨¡¢ËÑË÷¡¢ÉèÖÃ¡¢ĞŞ¸Ä¡¢É¾³ı¡¢ä¯ÀÀ¡¢ÏêÏ¸ĞÅÏ¢£©"},
-            {id: 2, title: 'Ìû×Ó', route: "circle/posts", description: "ËùÓĞÓĞ¹ØÌû×ÓµÄ²Ù×÷£¨ËÑË÷¡¢ÉèÖÃ¡¢ĞŞ¸Ä¡¢É¾³ı¡¢ä¯ÀÀ¡¢ÄÚÈİ¹ÜÀí£©"},
-            {id: 3, title: 'ÆÀÂÛ', route: "circle/comments", description: "ËùÓĞÓĞ¹ØÆÀÂÛµÄ²Ù×÷£¨ËÑË÷¡¢ÉèÖÃ¡¢ĞŞ¸Ä¡¢É¾³ı¡¢ä¯ÀÀ¡¢ÆÀÂÛ¹ÜÀí£©"},
-            {id: 4, title: '¾«Ñ¡È¦×Ó', route: ""},
-            {id: 5, title: '·¢ÏÖÈ¦×Ó', route: ""},
-            {id: 6, title: 'È¦×ÓÂÖ²¥Í¼', route: ""}
+            {id: 1, title: 'åœˆå­', route: "circle/items",description:"æ‰€æœ‰æœ‰å…³åœˆå­çš„æ“ä½œï¼ˆæ–°å»ºã€æœç´¢ã€è®¾ç½®ã€ä¿®æ”¹ã€åˆ é™¤ã€æµè§ˆã€è¯¦ç»†ä¿¡æ¯ï¼‰"},
+            {id: 2, title: 'åœˆå¸–', route: "circle/posts",description:"æ‰€æœ‰æœ‰å…³å¸–å­çš„æ“ä½œï¼ˆæœç´¢ã€è®¾ç½®ã€ä¿®æ”¹ã€åˆ é™¤ã€æµè§ˆã€å†…å®¹ç®¡ç†ï¼‰"},
+            {id: 3, title: 'åœˆè¯„', route: "circle/comments",description:"æ‰€æœ‰æœ‰å…³è¯„è®ºçš„æ“ä½œï¼ˆæœç´¢ã€è®¾ç½®ã€ä¿®æ”¹ã€åˆ é™¤ã€æµè§ˆã€è¯„è®ºç®¡ç†ï¼‰"},
+            {id: 4, title: 'ç²¾é€‰åœˆå­', route: ""},
+            {id: 5, title: 'å‘ç°åœˆå­', route: ""},
+            {id: 6, title: 'åœˆå­è½®æ’­å›¾', route: ""}
         ]
 
         return (
             <div>
+                <h2>åœˆå­ç®¡ç†</h2>
                 <ul>
                     <NavBox data={thisData}/>
                 </ul>

@@ -3,16 +3,16 @@
  */
 module.exports={
     path:'circle',
-    breadcrumbName:"È¦×Ó",
+    breadcrumbName:"åœˆå­",
     getChildRoutes(location,callback){
         require.ensure([],(require)=>{
-           callback(null,[
-               require('./routes/items')
-           ])
+            callback(null,[
+                require('./routes/items')
+            ])
         });
     },
     getComponent(nextState,callback){
-        require._ensure([],(require)=>{
+        require.ensure([],(require)=>{
             callback(null,require('./components/circle.jsx'))
         })
     }

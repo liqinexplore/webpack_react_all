@@ -1,9 +1,9 @@
 webpackJsonp([3],{
 
-/***/ 660:
+/***/ 664:
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -11,43 +11,45 @@ webpackJsonp([3],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactDom = __webpack_require__(232);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by lizhen on 4/12/2016.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
-	var One = function (_Component) {
-	    _inherits(One, _Component);
 
-	    function One() {
-	        _classCallCheck(this, One);
+	var circleItem = function (_Component) {
+	    _inherits(circleItem, _Component);
 
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(One).apply(this, arguments));
+	    function circleItem() {
+	        _classCallCheck(this, circleItem);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(circleItem).apply(this, arguments));
 	    }
 
-	    _createClass(One, [{
-	        key: 'render',
+	    _createClass(circleItem, [{
+	        key: "render",
 	        value: function render() {
-	            alert("ddssdsd");
+	            var properties = this.props;
+	            console.log("item.props: ", this.props);
 	            return _react2.default.createElement(
-	                'h1',
+	                "div",
 	                null,
-	                '�����������˵��ľ����ײ˵�'
+	                "此处是具体某一条数据的详细信息页，根据传入的参数（",
+	                properties.params.circleID,
+	                "）读取接口，显示数据，进行逻辑操作。"
 	            );
 	        }
 	    }]);
 
-	    return One;
+	    return circleItem;
 	}(_react.Component);
 
-	module.exports = One;
+	module.exports = circleItem;
 
 /***/ }
 

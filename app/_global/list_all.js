@@ -5,18 +5,18 @@ module.exports={
         type: "level",
         icon: "share-alt",
         keyID:"1",
-        router: "/firstRoute",
+        router: "/circle",
         child: [{
             name: "内容管理",
             type: "group",
             icon: "save",
             keyID:"2",
-            router: "/route_dome",
+            router: "",
             child: [{
                 name: "圈子",
                 icon: "appstore-o",
                 keyID:"3",
-                router: "/firstRoute/twoRoute"
+                router: "/circle/items"
             }, {
                 name: "圈帖",
                 icon: "book",
@@ -26,7 +26,7 @@ module.exports={
                 name: "圈评",
                 icon: "file-text",
                 keyID:"5",
-                router: "/circle/comments"
+                router: "/circle/components"
             }]
         },{
             name: "序列管理",

@@ -5,9 +5,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 export default React.createClass({
-   render(){
-       return <div>
-       我是页面未找到，就是说没有这个路由地址
-       </div>
-   }
+    render(){
+        return <div>
+            鎴戞槸椤甸潰鏈壘鍒帮紝灏辨槸璇存病鏈夎繖涓矾鐢卞湴鍧�
+        </div>
+    }
 });
