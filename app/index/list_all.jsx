@@ -14,7 +14,7 @@ const Sider = React.createClass({
         };
     },
     handleClick(e) {
-        console.log('click ', e);
+        //console.log('click ', e);
         this.setState({
             current: e.key
         });
@@ -29,10 +29,10 @@ const Sider = React.createClass({
     },
     render: function () {
         var config = this.props.ShowDatas;
-        console.log(config);
+        //console.log(config);
         //遍历第一层里面的数据用return来遍历这一层的数据并调用下一层的数据children
         var items = config.menu_structure.map(function (item) {
-            console.log("1:",item.name);
+            //console.log("1:",item.name);
             //定义两个参数在新的一层中调用children代表循环序列，drapdown代表这一层的内容
             var children, drapdown;
             //如果在item中包括child则执行下一层
@@ -42,7 +42,7 @@ const Sider = React.createClass({
                     var test,child2;
                     if(child.child){
                         child2=child.child.map(function(childs){
-                           console.log(test);
+                           //console.log(test);
                             test=(
                                 <Menu.Item   key={childs.keyID}  >
                                    <Link to={childs.router}> {childs.name}</Link>

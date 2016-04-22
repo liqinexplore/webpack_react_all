@@ -18,9 +18,9 @@ webpackJsonp([1],{
 	    getComponents: function getComponents(nextSate, callback) {
 	        __webpack_require__.e/* nsure */(4, function (require) {
 	            callback(null, {
-	                header: __webpack_require__(665),
-	                main: __webpack_require__(666),
-	                footer: __webpack_require__(667)
+	                header: __webpack_require__(667),
+	                main: __webpack_require__(668),
+	                footer: __webpack_require__(669)
 	            });
 	        });
 	    }

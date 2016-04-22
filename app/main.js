@@ -8,17 +8,17 @@ import NotFound from './modules/_public/NotFound';
 const routerConfig = [
     {
         path: '/',
-        component: Dashboard,
-        indexRoute: { component: Home },
+        component: Dashboard, //默认面板
+        indexRoute: { component: Home },//当刚开始进入，什么路由也没有的时候加载
         breadcrumbName:'首页',
         childRoutes: [
-           require('./modules/circle')
+           require('./modules/circle')//子路由地址
         ]
     },
     {
         path: '*',
         component: Dashboard,
-       indexRoute:{component:NotFound}
+       indexRoute:{component:NotFound}//当什么路由地址没有的时候加载
     }
 ];
 render((

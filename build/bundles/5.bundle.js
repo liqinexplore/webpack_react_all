@@ -1,6 +1,6 @@
 webpackJsonp([5],{
 
-/***/ 668:
+/***/ 670:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15,7 +15,7 @@ webpackJsonp([5],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _dashboard = __webpack_require__(669);
+	var _dashboard = __webpack_require__(671);
 
 	var _dashboard2 = _interopRequireDefault(_dashboard);
 
@@ -48,6 +48,7 @@ webpackJsonp([5],{
 	            var footer = _props.footer;
 	            var children = _props.children;
 	            var params = _props.params;var content = void 0;
+	            console.log("这是header", header);
 	            if (header || main || footer) {
 	                content = _react2.default.createElement(
 	                    'div',
@@ -93,7 +94,7 @@ webpackJsonp([5],{
 
 /***/ },
 
-/***/ 669:
+/***/ 671:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

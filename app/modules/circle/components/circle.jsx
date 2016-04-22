@@ -6,7 +6,8 @@ import {Affix} from 'antd';
 class Circle extends Component{
     render() {
         console.log("adsfa this.props: ", this.props);
-        let { header, main, footer, children, params } = this.props, content
+        let { header, main, footer, children, params } = this.props,content;
+        console.log("这是header",header);
         if (header || main || footer) {
             content = (
                 <div className="content_group">
