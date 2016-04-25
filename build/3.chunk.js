@@ -1,6 +1,6 @@
 webpackJsonp([3],{
 
-/***/ 664:
+/***/ 665:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13,7 +13,7 @@ webpackJsonp([3],{
 
 	var _antd = __webpack_require__(293);
 
-	var _reqwest = __webpack_require__(665);
+	var _reqwest = __webpack_require__(666);
 
 	var _reqwest2 = _interopRequireDefault(_reqwest);
 
@@ -63,10 +63,14 @@ webpackJsonp([3],{
 	        key: 'handleTableChange',
 	        value: function handleTableChange(pagination, filters, sorter) {
 	            var pager = this.state.pagination;
+	            console.log("我是handleTableChange中的pager", pager);
 	            pager.current = pagination.current;
+	            console.log("我是handleTableChange中的pager.current", pager.current);
 	            this.setState({
 	                pagination: pager
+
 	            });
+	            console.log(pagination);
 	            this.fetch({
 	                pageSize: pagination.pageSize,
 	                currentPage: pagination.current,
@@ -94,36 +98,22 @@ webpackJsonp([3],{
 	            console.log('请求参数：', params);
 	            this.setState({ loading: true });
 	            fetch("http://ant.design/components/table/demo/data.json", {
-	                method: 'get',
-	                data: 'params'
+	                method: 'get'
 	            }).then(function (res) {
-	                if (red.ok) {
-	                    var pagination = _self.state.pagination;
-	                    pagination.total = res.totalCount;
-	                    _self.setState({
-	                        loading: false,
-	                        data: res.data,
-	                        pagination: pagination
+	                console.log("我是fetch第一个then的参数", res);
+	                if (res.ok) {
+	                    res.json().then(function (result) {
+	                        var pagination = _self.state.pagination;
+
+	                        pagination.total = result.totalCount;
+	                        _self.setState({
+	                            loading: false,
+	                            data: result.data,
+	                            pagination: pagination
+	                        });
 	                    });
 	                }
 	            });
-	            //reqwest({
-	            //    url:'http://ant.design/components/table/demo/data.json',
-	            //    method:'get',
-	            //    data:params,
-	            //    type:'json',
-	            //    success:(result)=>{
-	            //        //var test_result=JSON.stringify(result);
-	            //        //console.log(test_result);
-	            //        const pagination = this.state.pagination;
-	            //        pagination.total = result.totalCount;
-	            //        this.setState({
-	            //            loading: false,
-	            //            data: result.data,
-	            //            pagination,
-	            //        });
-	            //    }
-	            //})
 	        })
 	    }, {
 	        key: 'componentDidMount',
@@ -149,7 +139,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 665:
+/***/ 666:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -173,7 +163,7 @@ webpackJsonp([3],{
 	  } else {
 	    var XHR2
 	    try {
-	      XHR2 = __webpack_require__(666)
+	      XHR2 = __webpack_require__(667)
 	    } catch (ex) {
 	      throw new Error('Peer dependency `xhr2` required! Please npm install xhr2')
 	    }
@@ -786,7 +776,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 666:
+/***/ 667:
 /***/ function(module, exports) {
 
 	/* (ignored) */

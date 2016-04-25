@@ -10,6 +10,15 @@ import { Breadcrumb } from 'antd';
 require('../../_global/custom.css');
 
 class Dashboard extends React.Component{
+    componentWillMount() {
+        let D = new Date();
+        let dateTime = D.getFullYear() + "-" + (parseInt(D.getMonth()) + 1) + "-" + D.getDay();
+        let keyInLs = localStorage.getItem("token_" + dateTime);
+        let keyInSs = sessionStorage.getItem("token_" + dateTime);
+        if ((!!keyInLs == false) && (!!keyInSs == false)) {
+            hashHistory.push("/login");
+        }
+    }
     render(){
         return(
             <div>

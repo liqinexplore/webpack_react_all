@@ -3,8 +3,10 @@ import React from 'react';
 import { render } from 'react-dom'
 import { Router, Route, hashHistory, IndexRoute,Link } from 'react-router';
 import Home from './modules/_public/Home';
+import Login from './modules/_public/Login'
 import Dashboard from './modules/_public/Dashboard';
 import NotFound from './modules/_public/NotFound';
+
 const routerConfig = [
     {
         path: '/',
@@ -14,6 +16,12 @@ const routerConfig = [
         childRoutes: [
            require('./modules/circle')//子路由地址
         ]
+    },
+    {
+        path: "login",
+        breadcrumbName:"登录",
+        component: Login
+
     },
     {
         path: '*',

@@ -10,6 +10,7 @@
     <file url="file://$PROJECT_DIR$/app/main.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/modules/_public/Dashboard.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/modules/_public/Home.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/_public/Login.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/modules/_public/NotFound.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/modules/_public/page_top.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/modules/circle/components/circle.jsx" charset="UTF-8" />

@@ -1,6 +1,6 @@
 webpackJsonp([5],{
 
-/***/ 670:
+/***/ 671:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15,7 +15,7 @@ webpackJsonp([5],{
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _dashboard = __webpack_require__(671);
+	var _dashboard = __webpack_require__(672);
 
 	var _dashboard2 = _interopRequireDefault(_dashboard);
 
@@ -94,7 +94,7 @@ webpackJsonp([5],{
 
 /***/ },
 
-/***/ 671:
+/***/ 672:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
