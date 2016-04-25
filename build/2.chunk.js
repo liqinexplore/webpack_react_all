@@ -10,9 +10,10 @@ webpackJsonp([2],{
 	 */
 	module.exports = {
 	    path: 'id/:circleID',
-
+	    breadcrumbName: "项目 :circleID",
 	    getComponent: function getComponent(nextState, callback) {
 	        __webpack_require__.e/* nsure */(3, function (require) {
+
 	            callback(null, __webpack_require__(664));
 	        });
 	    }

@@ -155,7 +155,10 @@ class CircleItems extends Component {
         return (
 
             <div>
-                <div style={{ marginBottom: 16 }}>
+                {
+                    this.props.children
+                    ||
+                    <div><div style={{ marginBottom: 16 }}>
                 <Button type="primary" onClick={this.start.bind(this)} disabled={!hasSelected} loading={loading}>
                     操作
                 </Button>
@@ -164,6 +167,8 @@ class CircleItems extends Component {
                     </span>
                 </div>
                 <Table rowSelection={rowSelection} dataSource={data} onChange={this.onChange.bind(this)}  columns={columns} pagination={pagination} />
+                    </div>
+                }
             </div>
 
         )

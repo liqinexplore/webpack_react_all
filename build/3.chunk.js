@@ -47,6 +47,8 @@ webpackJsonp([3],{
 	    function circleItem(props) {
 	        _classCallCheck(this, circleItem);
 
+	        console.log("这是构造方法");
+
 	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(circleItem).call(this, props));
 
 	        _this.state = {
@@ -75,29 +77,54 @@ webpackJsonp([3],{
 	        }
 	    }, {
 	        key: 'fetch',
-	        value: function fetch() {
-	            var _this2 = this;
+	        value: function (_fetch) {
+	            function fetch() {
+	                return _fetch.apply(this, arguments);
+	            }
 
+	            fetch.toString = function () {
+	                return _fetch.toString();
+	            };
+
+	            return fetch;
+	        }(function () {
 	            var params = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
+	            var _self = this;
 	            console.log('请求参数：', params);
 	            this.setState({ loading: true });
-	            (0, _reqwest2.default)({
-	                url: 'http://ant.design/components/table/demo/data.json',
+	            fetch("http://ant.design/components/table/demo/data.json", {
 	                method: 'get',
-	                data: params,
-	                type: 'json',
-	                success: function success(result) {
-	                    var pagination = _this2.state.pagination;
-	                    pagination.total = result.totalCount;
-	                    _this2.setState({
+	                data: 'params'
+	            }).then(function (res) {
+	                if (red.ok) {
+	                    var pagination = _self.state.pagination;
+	                    pagination.total = res.totalCount;
+	                    _self.setState({
 	                        loading: false,
-	                        data: result.data,
+	                        data: res.data,
 	                        pagination: pagination
 	                    });
 	                }
 	            });
-	        }
+	            //reqwest({
+	            //    url:'http://ant.design/components/table/demo/data.json',
+	            //    method:'get',
+	            //    data:params,
+	            //    type:'json',
+	            //    success:(result)=>{
+	            //        //var test_result=JSON.stringify(result);
+	            //        //console.log(test_result);
+	            //        const pagination = this.state.pagination;
+	            //        pagination.total = result.totalCount;
+	            //        this.setState({
+	            //            loading: false,
+	            //            data: result.data,
+	            //            pagination,
+	            //        });
+	            //    }
+	            //})
+	        })
 	    }, {
 	        key: 'componentDidMount',
 	        value: function componentDidMount() {
@@ -111,7 +138,7 @@ webpackJsonp([3],{
 	                dataSource: this.state.data,
 	                pagination: this.state.pagination,
 	                loading: this.state.loading,
-	                onChange: this.handleTableChange });
+	                onChange: this.handleTableChange.bind(this) });
 	        }
 	    }]);
 

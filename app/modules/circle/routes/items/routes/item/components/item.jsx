@@ -3,6 +3,7 @@
  */
 import React, { Component } from 'react'
 import { Table } from 'antd';
+import { Pagination } from 'antd';
 import reqwest from 'reqwest';
 
 const columns = [{
@@ -22,19 +23,24 @@ const columns = [{
 }];
 class circleItem extends Component {
    constructor(props){
+       console.log("这是构造方法");
        super(props);
        this.state={
            data: [],
            pagination: {},
-           loading: false,
+           loading: false
        }
    }
     handleTableChange(pagination, filters, sorter) {
         const pager = this.state.pagination;
+        console.log("我是handleTableChange中的pager",pager);
         pager.current = pagination.current;
+        console.log("我是handleTableChange中的pager.current",  pager.current);
         this.setState({
             pagination: pager,
+
         });
+        console.log(pagination);
         this.fetch({
             pageSize: pagination.pageSize,
             currentPage: pagination.current,
@@ -44,23 +50,27 @@ class circleItem extends Component {
         });
     }
     fetch(params={}){
+        var _self=this;
         console.log('请求参数：', params);
         this.setState({ loading: true });
-        reqwest({
-            url:'http://ant.design/components/table/demo/data.json',
-            method:'get',
-            data:params,
-            type:'json',
-            success:(result)=>{
-                const pagination = this.state.pagination;
-                pagination.total = result.totalCount;
-                this.setState({
-                    loading: false,
-                    data: result.data,
-                    pagination,
-                });
+        fetch("http://ant.design/components/table/demo/data.json",{
+            method:'get'
+        }).then((res)=>{
+            console.log("我是fetch第一个then的参数",res);
+            if(res.ok){
+                res.json().then((result)=>{
+                    const pagination = _self.state.pagination;
+
+                    pagination.total = result.totalCount;
+                    _self.setState({
+                        loading: false,
+                        data: result.data,
+                        pagination,
+                    });
+                })
+
             }
-        })
+        });
     }
     componentDidMount() {
         this.fetch();
@@ -72,7 +82,7 @@ class circleItem extends Component {
                    dataSource={this.state.data}
                    pagination={this.state.pagination}
                    loading={this.state.loading}
-                   onChange={this.handleTableChange} />
+                   onChange={this.handleTableChange.bind(this)} />
         )
     }
 }

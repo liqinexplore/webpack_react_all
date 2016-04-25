@@ -48,7 +48,7 @@ webpackJsonp([5],{
 	            var footer = _props.footer;
 	            var children = _props.children;
 	            var params = _props.params;var content = void 0;
-	            console.log("这是header", header);
+	            console.log("children", children);
 	            if (header || main || footer) {
 	                content = _react2.default.createElement(
 	                    'div',

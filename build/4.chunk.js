@@ -273,21 +273,25 @@ webpackJsonp([4],{
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-	                _react2.default.createElement(
+	                this.props.children || _react2.default.createElement(
 	                    'div',
-	                    { style: { marginBottom: 16 } },
+	                    null,
 	                    _react2.default.createElement(
-	                        _antd.Button,
-	                        { type: 'primary', onClick: this.start.bind(this), disabled: !hasSelected, loading: loading },
-	                        '操作'
+	                        'div',
+	                        { style: { marginBottom: 16 } },
+	                        _react2.default.createElement(
+	                            _antd.Button,
+	                            { type: 'primary', onClick: this.start.bind(this), disabled: !hasSelected, loading: loading },
+	                            '操作'
+	                        ),
+	                        _react2.default.createElement(
+	                            'span',
+	                            { style: { marginLeft: 8 } },
+	                            hasSelected ? '选择了 ' + selectedRowKeys.length + ' 个对象' : ''
+	                        )
 	                    ),
-	                    _react2.default.createElement(
-	                        'span',
-	                        { style: { marginLeft: 8 } },
-	                        hasSelected ? '选择了 ' + selectedRowKeys.length + ' 个对象' : ''
-	                    )
-	                ),
-	                _react2.default.createElement(_antd.Table, { rowSelection: rowSelection, dataSource: data, onChange: this.onChange.bind(this), columns: columns, pagination: pagination })
+	                    _react2.default.createElement(_antd.Table, { rowSelection: rowSelection, dataSource: data, onChange: this.onChange.bind(this), columns: columns, pagination: pagination })
+	                )
 	            );
 	        }
 	    }]);

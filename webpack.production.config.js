@@ -3,7 +3,7 @@
  */
 var path=require('path');
 var webpack =require('webpack');
-
+var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 module.exports={
     resolve:{
         root:[
@@ -11,16 +11,13 @@ module.exports={
         ],
         extensions:['','.js','.jsx']
     },
-    entry:['webpack/hot/dev-server',
-        'webpack-dev-server/client?http://localhost:8090',
-        path.resolve(__dirname, './app/main.js')],
+    entry:[
+        path.resolve(__dirname, './app/main.js')
+    ],
     output:{
-        //path: path.resolve(__dirname, 'build/bundles'),
-        //filename:'bundle.js'
         path: __dirname + '/build',
         filename: 'bundle.js',
-        chunkFilename: '[id].chunk.js',
-        publicPath: '/build/'
+        chunkFilename: '[id].chunk.js'
     },
     module:{
         loaders:[{
@@ -40,9 +37,9 @@ module.exports={
         ]
     },
     plugins: [
-    new webpack.DefinePlugin({
-        'process.env.NODE_ENV': '"development"'
-    }),
-    new webpack.HotModuleReplacementPlugin()
-]
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': '"development"'
+        }),
+        new webpack.HotModuleReplacementPlugin()
+    ]
 };

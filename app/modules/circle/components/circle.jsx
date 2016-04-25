@@ -7,7 +7,7 @@ class Circle extends Component{
     render() {
         console.log("adsfa this.props: ", this.props);
         let { header, main, footer, children, params } = this.props,content;
-        console.log("这是header",header);
+        console.log("children",children);
         if (header || main || footer) {
             content = (
                 <div className="content_group">
