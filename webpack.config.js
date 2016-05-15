@@ -7,7 +7,8 @@ var webpack =require('webpack');
 module.exports={
     resolve:{
         root:[
-            path.resolve('./app/_global/components')
+            path.resolve('./app/_global/components'),
+            path.resolve('./app/_global/supports')
         ],
         extensions:['','.js','.jsx']
     },

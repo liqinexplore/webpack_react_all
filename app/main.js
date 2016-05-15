@@ -14,7 +14,11 @@ const routerConfig = [
         indexRoute: { component: Home },//当刚开始进入，什么路由也没有的时候加载
         breadcrumbName:'首页',
         childRoutes: [
-           require('./modules/circle')//子路由地址
+           require('./modules/circle'),//子路由地址
+            require('./modules/draft'),
+            require('./modules/qiniu'),
+            require('./modules/activity'),
+
         ]
     },
     {

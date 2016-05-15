@@ -7,14 +7,16 @@ module.exports={
     getChildRoutes(location,callback){
         require.ensure([],(require)=>{
             callback(null,[
-                require('./routes/items')//这个子路由
+                require('./routes/items'),//这个子路由
+                require('./routes/posts')
+
             ])
         });
     },
     getComponent(nextState,callback){
         require.ensure([],(require)=>{
 
-            callback(null,require('./components/circle.jsx'))//这个是跳转的面板
+            callback(null,require('./components/circle.jsx'));//这个是跳转的面板
         })
     }
 };

@@ -56,12 +56,12 @@ module.exports={
         type: "level",
         keyID:"12",
         icon: "book",
-        router: "",
+        router: "/draft",
         child: [{
             name: "广告",
             keyID:"13",
             icon: "shopping-cart",
-            router: "underline/ad"
+            router: "/draft/demo"
         }, {
             name: "商品",
             keyID:"14",
@@ -83,5 +83,29 @@ module.exports={
             icon: "team",
             router: "underline/party"
         }]
+    },{
+            name: "七牛",
+            type: "tablet",
+            keyID:"18",
+            icon: "book",
+            router: "qiniu",
+    },{
+            name: "活动",
+            type: "level",
+            keyID:"19",
+            icon: "book",
+            router: "/activity",
+            child: [{
+                name: "广告",
+                keyID:"20",
+                icon: "shopping-cart",
+                router: "/activity/demo"
+            }, {
+                name: "商品",
+                keyID:"21",
+                icon: "shopping-cart",
+                router: "/activity/goods"
+            }                                                                                        ]
+
     }]
 };

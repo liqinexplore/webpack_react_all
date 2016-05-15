@@ -1,6 +1,6 @@
 webpackJsonp([3],{
 
-/***/ 665:
+/***/ 804:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13,7 +13,7 @@ webpackJsonp([3],{
 
 	var _antd = __webpack_require__(293);
 
-	var _reqwest = __webpack_require__(666);
+	var _reqwest = __webpack_require__(805);
 
 	var _reqwest2 = _interopRequireDefault(_reqwest);
 
@@ -139,7 +139,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 666:
+/***/ 805:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -163,7 +163,7 @@ webpackJsonp([3],{
 	  } else {
 	    var XHR2
 	    try {
-	      XHR2 = __webpack_require__(667)
+	      XHR2 = __webpack_require__(806)
 	    } catch (ex) {
 	      throw new Error('Peer dependency `xhr2` required! Please npm install xhr2')
 	    }
@@ -776,7 +776,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 667:
+/***/ 806:
 /***/ function(module, exports) {
 
 	/* (ignored) */

@@ -7,7 +7,8 @@ var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 module.exports={
     resolve:{
         root:[
-            path.resolve('./app/_global/components')
+            path.resolve('./app/_global/components'),
+            path.resolve('./app/_global/supports')
         ],
         extensions:['','.js','.jsx']
     },

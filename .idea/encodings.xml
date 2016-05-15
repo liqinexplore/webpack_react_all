@@ -13,6 +13,8 @@
     <file url="file://$PROJECT_DIR$/app/modules/_public/Login.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/modules/_public/NotFound.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/modules/_public/page_top.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/activity/components/content.jsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/activity/index.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/modules/circle/components/circle.jsx" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/modules/circle/components/dashboard.jsx" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/modules/circle/index.js" charset="UTF-8" />
@@ -22,5 +24,14 @@
     <file url="file://$PROJECT_DIR$/app/modules/circle/routes/items/index.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/modules/circle/routes/items/routes/item/components/item.jsx" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/modules/circle/routes/items/routes/item/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/circle/routes/posts/components/draft_item.jsx" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/modules/circle/routes/posts/components/footer.jsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/circle/routes/posts/components/header.jsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/circle/routes/posts/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/draft/components/dashboard.jsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/draft/demo/components/draft_demo.jsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/draft/demo/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/qiniu/components/circle.jsx" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
